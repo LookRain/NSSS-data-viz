@@ -3,6 +3,7 @@
   <main>
     <NuxtLink to="/sa">sexual assault</NuxtLink>
     <NuxtLink to="/sh">sexual harrasement</NuxtLink>
+    <NuxtLink to="/location">location</NuxtLink>
   </main>
 </template>
 
