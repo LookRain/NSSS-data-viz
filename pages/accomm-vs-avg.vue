@@ -3,13 +3,13 @@
 </template>
 
 <script setup>
-import VChart, { THEME_KEY } from "vue-echarts";
-import "echarts";
+import VChart, {THEME_KEY} from 'vue-echarts';
+import 'echarts';
+
 const rawData = [
-  { value: 4.5, itemStyle: { color: "black" } },
-  { value: 8.8, itemStyle: { color: "c23531" } },
+  {value: 4.5, itemStyle: {color: 'green'}},
+  {value: 8.8, itemStyle: {color: 'red'}},
 ];
-// const rawData = [4.5, 8.8].sort();
 // const colors = [
 //   '#c23531',
 //   '#ae2f2c',
@@ -26,21 +26,21 @@ const rawData = [
 
 const option = ref({
   xAxis: {
-    type: "category",
-    data: ["Average", "Student Residences"],
+    type: 'category',
+    data: ['Average', 'Student Residences'],
     axisLabel: {
       fontSize: 25,
       // inside: true,
-      color: "black",
+      color: 'black',
     },
   },
   yAxis: {
-    type: "value",
+    type: 'value',
     fontSize: 50,
-    color: "#999",
-    name: "%",
+    color: '#999',
+    name: '%',
   },
-  backgroundColor: "white",
+  backgroundColor: 'white',
   // visualMap: {
   //   show: false,
   //   type: "piecewise",
@@ -53,14 +53,14 @@ const option = ref({
   series: [
     {
       data: rawData,
-      type: "bar",
+      type: 'bar',
       // showBackground: true,
       //color: "#c23531",
       label: {
         show: true, // This line makes the label visible
-        formatter: "{c}%",
-        position: "top", // This line sets the position of the label
-        color: "black", // This line sets the color of the label text
+        formatter: '{c}%',
+        position: 'top', // This line sets the position of the label
+        color: 'black', // This line sets the color of the label text
         fontSize: 36,
       },
       animationDelay: function (idx) {
