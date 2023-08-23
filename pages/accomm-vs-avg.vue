@@ -5,8 +5,11 @@
 <script setup>
 import VChart, { THEME_KEY } from "vue-echarts";
 import "echarts";
-
-const rawData = [4.5, 8.8].sort();
+const rawData = [
+  { value: 4.5, itemStyle: { color: "black" } },
+  { value: 8.8, itemStyle: { color: "c23531" } },
+];
+// const rawData = [4.5, 8.8].sort();
 // const colors = [
 //   '#c23531',
 //   '#ae2f2c',
@@ -38,20 +41,21 @@ const option = ref({
     name: "%",
   },
   backgroundColor: "white",
-  visualMap: {
-    show: false,
-    min: 1,
-    max: 100,
-    inRange: {
-      colorLightness: [0.8, 0.1],
-    },
-  },
+  // visualMap: {
+  //   show: false,
+  //   type: "piecewise",
+  //   min: 1,
+  //   max: 100,
+  //   inRange: {
+  //     colorLightness: [0.1, 0.6],
+  //   },
+  // },
   series: [
     {
       data: rawData,
       type: "bar",
       // showBackground: true,
-      color: "#c23531",
+      //color: "#c23531",
       label: {
         show: true, // This line makes the label visible
         formatter: "{c}%",
@@ -64,6 +68,7 @@ const option = ref({
       },
     },
   ],
+  // color: ["#130504", "#c23531"],
 });
 </script>
 <style scoped>
