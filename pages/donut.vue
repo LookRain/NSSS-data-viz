@@ -1,5 +1,4 @@
 <template>
-  {{ index }}
   <v-chart class="chart" :option="option" autoresize />
 </template>
 
