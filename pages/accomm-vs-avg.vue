@@ -33,8 +33,9 @@ const option = ref({
   },
   yAxis: {
     type: "value",
-    fontSize: 25,
+    fontSize: 50,
     color: "#999",
+    name: "%",
   },
   backgroundColor: "white",
   visualMap: {
@@ -53,6 +54,7 @@ const option = ref({
       color: "#c23531",
       label: {
         show: true, // This line makes the label visible
+        formatter: "{c}%",
         position: "top", // This line sets the position of the label
         color: "black", // This line sets the color of the label text
         fontSize: 36,
