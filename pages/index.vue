@@ -1,10 +1,12 @@
 <template>
   <!-- index page for sa.vue sh.vue -->
   <main>
-    <NuxtLink to="/sa">sexual assault</NuxtLink>
-    <NuxtLink to="/sh">sexual harrasement</NuxtLink>
-    <NuxtLink to="/location">location</NuxtLink>
-    <NuxtLink to="/donut">donut</NuxtLink>
+    <NuxtLink to="/accomm-vs-avg">SA rate in accom vs. avg</NuxtLink>
+    <NuxtLink to="/sa">SA gender</NuxtLink>
+    <NuxtLink to="/sh">SH gender</NuxtLink>
+    <NuxtLink to="/location">SA location</NuxtLink>
+    <NuxtLink to="/donut">knowledge</NuxtLink>
+    <NuxtLink to="/accomm-vs-avg">SA rate in accom vs. avg</NuxtLink>
   </main>
 </template>
 
