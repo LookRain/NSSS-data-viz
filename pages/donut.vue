@@ -90,7 +90,6 @@ const option = ref({
       },
       label: {
         show: true,
-        position: 'side',
       },
       emphasis: {
         label: {
