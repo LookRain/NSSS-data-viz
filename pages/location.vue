@@ -3,17 +3,17 @@
 </template>
 
 <script setup>
-import VChart, {THEME_KEY} from 'vue-echarts';
-import 'echarts';
+import VChart, { THEME_KEY } from "vue-echarts";
+import "echarts";
 
 const option = ref({
-  backgroundColor: '#2c343c',
+  backgroundColor: "white",
   title: {
-    text: 'Customized Pie',
-    left: 'center',
+    //text: "Customized Pie",
+    left: "center",
     top: 20,
     textStyle: {
-      color: '#ccc',
+      color: "#383838",
     },
   },
   // tooltip: {
@@ -29,34 +29,34 @@ const option = ref({
   },
   series: [
     {
-      name: 'Access From',
-      type: 'pie',
-      radius: '55%',
-      center: ['50%', '50%'],
+      name: "Access From",
+      type: "pie",
+      radius: "55%",
+      center: ["50%", "50%"],
       data: [
-        {value: 27.3, name: 'Student accommodation and residences'},
-        {value: 26.7, name: 'Clubs and societies, events and spaces'},
-        {value: 20.7, name: 'At a private home or residence'},
-        {value: 17.9, name: 'General campus areas'},
-        {value: 16.6, name: 'Hospitality or retail areas off campus'},
-        {value: 10.4, name: 'Hospitality or retail areas on campus'},
-        {value: 7.0, name: 'University library'},
-        {value: 6.0, name: 'University lecture theatres, computer labs'},
-        {value: 4.0, name: 'On work experience or professional placement'},
-        {value: 3.0, name: 'Sports and recreational areas on campus'},
-        {value: 2.6, name: 'Somewhere else'},
-        {value: 1.7, name: 'Academic or administrative staff office'},
+        { value: 27.3, name: "STUDENT RESIDENCES" },
+        { value: 26.7, name: "Clubs & societies, events & spaces" },
+        { value: 20.7, name: "At a private home/residence" },
+        { value: 17.9, name: "General campus areas" },
+        { value: 16.6, name: "Hospitality/retail areas off campus" },
+        { value: 10.4, name: "Hospitality/retail areas on campus" },
+        { value: 7.0, name: "University library" },
+        { value: 6.0, name: "University lecture theatres/computer labs" },
+        { value: 4.0, name: "On work experience/professional placement" },
+        { value: 3.0, name: "Sports & recreational areas on campus" },
+        { value: 2.6, name: "Somewhere else" },
+        { value: 1.7, name: "Academic/administrative staff office" },
       ].sort(function (a, b) {
         return a.value - b.value;
       }),
-      roseType: 'radius',
+      roseType: "radius",
       label: {
-        fontSize: 20,
-        fontWeight: '300',
-        color: 'rgba(255, 255, 255, 0.5)',
+        fontSize: 12,
+        fontWeight: "300",
+        color: "#383838",
         formatter: function (params) {
           // Check if it's the special data point
-          if (params.name === 'Student accommodation and residences') {
+          if (params.name === "STUDENT RESIDENCES") {
             return `{a|${params.name}}`; // The name is already formatted with rich text
           } else {
             return params.name;
@@ -65,28 +65,29 @@ const option = ref({
         rich: {
           a: {
             fontSize: 32, // This will be the bigger font size for the special data point
-            color: 'rgba(255, 255, 255, 0.6)',
+            color: "#3d0a02",
+            fontWeight: "500",
           },
           b: {},
         },
       },
       labelLine: {
         lineStyle: {
-          color: 'rgba(255, 255, 255, 0.3)',
+          color: "#c9c9c9",
         },
         smooth: 0.2,
         length: 10,
         length2: 20,
       },
       itemStyle: {
-        color: '#c23531',
-        shadowBlur: 200,
-        shadowColor: 'rgba(0, 0, 0, 0.5)',
+        color: "#c23531",
+        shadowBlur: 100,
+        shadowColor: "rgba(0, 0, 0, 0.5)",
       },
-      animationType: 'scale',
-      animationEasing: 'elasticOut',
+      animationType: "scale",
+      animationEasing: "elasticOut",
       animationDelay: function (idx) {
-        return Math.random() * 200;
+        return idx * 150;
       },
     },
   ],

@@ -3,8 +3,8 @@
 </template>
 
 <script setup>
-import VChart, {THEME_KEY} from 'vue-echarts';
-import 'echarts';
+import VChart, { THEME_KEY } from "vue-echarts";
+import "echarts";
 
 const rawData = [62.9, 62.8, 76.8, 26].sort();
 // const colors = [
@@ -23,18 +23,20 @@ const rawData = [62.9, 62.8, 76.8, 26].sort();
 
 const option = ref({
   xAxis: {
-    type: 'category',
-    data: ['Male', 'Transgener', 'Female', 'Non-Binary'],
+    type: "category",
+    data: ["Male", "Transgener", "Female", "Non-Binary"],
     axisLabel: {
-      fontSize: 18,
+      fontSize: 25,
       // inside: true,
-      color: '#999',
+      color: "black",
     },
   },
   yAxis: {
-    type: 'value',
+    type: "value",
+    fontSize: 25,
+    color: "#999",
   },
-  backgroundColor: '#2c343c',
+  backgroundColor: "white",
   visualMap: {
     show: false,
     min: 1,
@@ -46,10 +48,15 @@ const option = ref({
   series: [
     {
       data: rawData,
-      type: 'bar',
+      type: "bar",
       // showBackground: true,
-      color: '#c23531',
-
+      color: "#c23531",
+      label: {
+        show: true, // This line makes the label visible
+        position: "top", // This line sets the position of the label
+        color: "black", // This line sets the color of the label text
+        fontSize: 36,
+      },
       animationDelay: function (idx) {
         return idx * 1000;
       },
