@@ -37,13 +37,13 @@ const dataSet = [
     {
       value: 46.7,
       name: 'Know nothing or very little about where to seek support or assistance for harassment',
-      label: {
-        show: false,
-      },
     },
     {
       value: 53.3,
       name: 'Know something about where to seek support for harassment',
+      label: {
+        show: false,
+      },
     },
   ],
   [
