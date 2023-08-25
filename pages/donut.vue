@@ -36,11 +36,19 @@ const dataSet = [
   [
     {
       value: 46.7,
+<<<<<<< HEAD
       name: "know nothing or very little", // about where to seek support or assistance for harassment",
     },
     {
       value: 53.3,
       name: "know something or more",
+=======
+      name: 'Know nothing or very little about where to seek support or assistance for harassment',
+    },
+    {
+      value: 53.3,
+      name: 'Know something about where to seek support for harassment',
+>>>>>>> refs/remotes/origin/main
       label: {
         show: false,
       },
