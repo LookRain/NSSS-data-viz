@@ -35,23 +35,23 @@ const option = ref({
       center: ["50%", "50%"],
       data: [
         { value: 27.3, name: "STUDENT RESIDENCES" },
-        { value: 26.7, name: "Clubs & societies, events & spaces" },
-        { value: 20.7, name: "At a private home/residence" },
+        { value: 26.7, name: "Clubs & societies,\nevents & spaces" },
+        { value: 20.7, name: "At a private home/\nresidence" },
         { value: 17.9, name: "General campus areas" },
-        { value: 16.6, name: "Hospitality/retail areas off campus" },
-        { value: 10.4, name: "Hospitality/retail areas on campus" },
+        { value: 16.6, name: "Hospitality/retail areas\n off campus" },
+        { value: 10.4, name: "Hospitality/retail areas\n on campus" },
         { value: 7.0, name: "University library" },
-        { value: 6.0, name: "University lecture theatres/computer labs" },
-        { value: 4.0, name: "On work experience/professional placement" },
-        { value: 3.0, name: "Sports & recreational areas on campus" },
+        { value: 6.0, name: "University lecture theatres/\ncomputer labs" },
+        { value: 4.0, name: "On work experience/\nprofessional placement" },
+        { value: 3.0, name: "Sports & recreational \nareas on campus" },
         { value: 2.6, name: "Somewhere else" },
-        { value: 1.7, name: "Academic/administrative staff office" },
+        { value: 1.7, name: "Academic/administrative\n staff office" },
       ].sort(function (a, b) {
         return a.value - b.value;
       }),
       roseType: "radius",
       label: {
-        fontSize: 12,
+        fontSize: 20,
         fontWeight: "300",
         color: "#383838",
         formatter: function (params) {
@@ -66,7 +66,7 @@ const option = ref({
           a: {
             fontSize: 32, // This will be the bigger font size for the special data point
             color: "#3d0a02",
-            fontWeight: "500",
+            fontWeight: "800",
           },
           b: {},
         },

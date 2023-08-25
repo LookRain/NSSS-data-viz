@@ -29,7 +29,7 @@ const option = ref({
     type: "category",
     data: ["Average", "Student Residences"],
     axisLabel: {
-      fontSize: 25,
+      fontSize: 48,
       // inside: true,
       color: "black",
     },
@@ -65,7 +65,7 @@ const option = ref({
         formatter: "{c}%",
         position: "top", // This line sets the position of the label
         color: "black", // This line sets the color of the label text
-        fontSize: 36,
+        fontSize: 70,
       },
       animationDelay: function (idx) {
         return idx * 1000;

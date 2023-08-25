@@ -24,9 +24,9 @@ const rawData = [62.9, 62.8, 76.8, 26].sort();
 const option = ref({
   xAxis: {
     type: "category",
-    data: ["Male", "Transgener", "Female", "Non-Binary"],
+    data: ["Male", "Transgender", "Female", "Non-Binary"],
     axisLabel: {
-      fontSize: 25,
+      fontSize: 45,
       // inside: true,
       color: "black",
     },
@@ -55,7 +55,8 @@ const option = ref({
         show: true, // This line makes the label visible
         position: "top", // This line sets the position of the label
         color: "black", // This line sets the color of the label text
-        fontSize: 36,
+        fontSize: 50,
+        formatter: "{c}% ",
       },
       animationDelay: function (idx) {
         return idx * 1000;

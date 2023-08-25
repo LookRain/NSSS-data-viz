@@ -26,7 +26,7 @@ const option = ref({
     type: "category",
     data: ["Male", "Female", "Transgender", "Non-Binary"],
     axisLabel: {
-      fontSize: 25,
+      fontSize: 45,
       color: "black",
     },
   },
@@ -54,7 +54,8 @@ const option = ref({
         show: true, // This line makes the label visible
         position: "top", // This line sets the position of the label
         color: "black", // This line sets the color of the label text
-        fontSize: 36,
+        fontSize: 50,
+        formatter: "{c}% ",
       },
       // showBackground: true,
       color: "#c23531",
